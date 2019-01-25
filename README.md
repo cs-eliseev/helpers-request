@@ -54,6 +54,24 @@ git clone https://github.com/cs-eliseev/helpers-request.git
 
 [Download the latest release here](https://github.com/cs-eliseev/helpers-request/archive/master.zip).
 
+## Usage
+
+The class consists of static methods that are conveniently used in any project. See example [examples-request.php](https://github.com/cs-eliseev/helpers-request/blob/master/examples/examples-request.php).
+
+**Get POST data by key**
+
+Example:
+```php
+$_POST['example'] = 12345;
+Request::post('example');
+// 12345
+```
+
+Set default value:
+```php
+Request::post('example_2', 12345);
+// 12345
+```
 
 ## License
 
