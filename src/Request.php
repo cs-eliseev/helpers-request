@@ -12,13 +12,13 @@ namespace cse\helpers;
 class Request
 {
     /**
-     * Post
+     * Get POST data by key name
      *
-     * @param $key
+     * @param string $key
      * @param null $default
-     * @return mixed|null
+     * @return null
      */
-    public static function post($key, $default = null)
+    public static function post(string $key, $default = null)
     {
         return $_POST[$key] ?? $default;
     }
