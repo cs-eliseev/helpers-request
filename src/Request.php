@@ -22,4 +22,16 @@ class Request
     {
         return $_POST[$key] ?? $default;
     }
+
+    /**
+     * Get GET data by key name
+     *
+     * @param string $key
+     * @param null $default
+     * @return null
+     */
+    public static function get(string $key, $default = null)
+    {
+        return $_GET[$key] ?? $default;
+    }
 }
