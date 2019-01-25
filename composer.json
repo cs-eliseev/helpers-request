@@ -1,0 +1,31 @@
+{
+    "name": "cse/helpers-request",
+    "description": "The helpers allows you to Request processing. Get value for POST/GET/REQUEST method by key and set default value, check exist AJAX, POST and GET method - all this is available in this library.",
+    "keywords": ["set default post", "set default get", "set default request", "check ajax", "check post", "check get", "cse", "cs-eliseev", "framework", "basic", "library", "project"],
+    "homepage": "https://github.com/cs-eliseev/helpers-request",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eliseev Alexey",
+            "email": "a.k.eliseev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "cse\\helpers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "tests/"
+        }
+    }
+}
