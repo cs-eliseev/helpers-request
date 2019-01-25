@@ -58,7 +58,7 @@ git clone https://github.com/cs-eliseev/helpers-request.git
 
 The class consists of static methods that are conveniently used in any project. See example [examples-request.php](https://github.com/cs-eliseev/helpers-request/blob/master/examples/examples-request.php).
 
-**Get POST data by key**
+**Method POST data by key name**
 
 Example:
 ```php
