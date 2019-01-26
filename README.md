@@ -104,6 +104,16 @@ Set default value:
 // 12345
 ```
 
+**Is AJAX**
+
+Example:
+```php
+$_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+Request::isAjax();
+// true
+```
+
+
 
 ## License
 
