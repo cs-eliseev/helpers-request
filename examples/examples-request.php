@@ -32,3 +32,8 @@ echo PHP_EOL;
 $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
 var_dump(Request::isAjax());
 echo PHP_EOL;
+
+// Example: is post
+$_SERVER['REQUEST_METHOD'] = Request::METHOD_POST;
+var_dump(Request::isPost());
+echo PHP_EOL;
