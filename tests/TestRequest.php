@@ -85,4 +85,38 @@ class TestRequest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param             $is_ajax
+     * @param             $expected
+     *
+     * @dataProvider providerIsAjax
+     */
+    public function testIsAjax($is_ajax, $expected)
+    {
+        if ($is_ajax) {
+            $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+        } else {
+            unset($_SERVER['HTTP_X_REQUESTED_WITH']);
+        }
+        $this->assertEquals($expected, Request::isAjax());
+    }
+
+    /**
+     * @return array
+     */
+    public function providerIsAjax(): array
+    {
+        return [
+            [
+                true,
+                true,
+            ],
+
+            [
+                false,
+                false,
+            ],
+        ];
+    }
 }
