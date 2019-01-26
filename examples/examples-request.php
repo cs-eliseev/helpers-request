@@ -37,3 +37,8 @@ echo PHP_EOL;
 $_SERVER['REQUEST_METHOD'] = Request::METHOD_POST;
 var_dump(Request::isPost());
 echo PHP_EOL;
+
+// Example: is get
+$_SERVER['REQUEST_METHOD'] = Request::METHOD_GET;
+var_dump(Request::isGet());
+echo PHP_EOL;
