@@ -27,3 +27,8 @@ var_dump(Request::request('example'));
 // set default value: 12345
 Request::request('example_2', 12345);
 echo PHP_EOL;
+
+// Example: is ajax
+$_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+var_dump(Request::isAjax());
+echo PHP_EOL;
