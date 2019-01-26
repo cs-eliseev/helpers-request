@@ -46,4 +46,14 @@ class Request
     {
         return $_REQUEST[$key] ?? $default;
     }
+
+    /**
+     * Check Ajax request
+     *
+     * @return bool
+     */
+    public static function isAjax(): bool
+    {
+        return strtolower($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '') === 'xmlhttprequest';
+    }
 }
