@@ -45,6 +45,25 @@ class TestRequest extends TestCase
     }
 
     /**
+     * @param string $key
+     * @param $default
+     * @param $value
+     * @param bool $set
+     * @param $expected
+     *
+     * @dataProvider providerRequest
+     */
+    public function testRequests(string $key, $default, $value, bool $set, $expected): void
+    {
+        if ($set) {
+            $_REQUEST[$key] = $value;
+        } else {
+            unset($_REQUEST[$key]);
+        }
+        $this->assertEquals($expected, Request::request($key, $default));
+    }
+
+    /**
      * @return array
      */
     public function providerRequest(): array
