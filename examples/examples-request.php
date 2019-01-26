@@ -19,3 +19,11 @@ var_dump(Request::get('example'));
 // set default value: 12345
 Request::get('example_2', 12345);
 echo PHP_EOL;
+
+// Example: request
+// ["example" => 12345] => 12345
+$_REQUEST['example'] = 12345;
+var_dump(Request::request('example'));
+// set default value: 12345
+Request::request('example_2', 12345);
+echo PHP_EOL;
