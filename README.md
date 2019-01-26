@@ -122,6 +122,16 @@ Request::isPost();
 // true
 ```
 
+**Is GET**
+
+Example:
+```php
+$_SERVER['REQUEST_METHOD'] = Request::METHOD_GET;
+Request::isGet();
+// true
+```
+
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) file for licensing details.
