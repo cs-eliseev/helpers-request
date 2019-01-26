@@ -89,6 +89,22 @@ Request::get('example_2', 12345);
 // 12345
 ```
 
+**Method REQUEST data by key name**
+
+Example:
+```php
+$_REQUEST['example'] = 12345;
+Request::request('example');
+// 12345
+```
+
+Set default value:
+```php
+   Request::request('example_2', 12345);
+// 12345
+```
+
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) file for licensing details.
