@@ -119,4 +119,39 @@ class TestRequest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $method
+     * @param bool $expected
+     *
+     * @dataProvider providerIsPost
+     */
+    public function testIsPost(string $method, bool $expected)
+    {
+        $_SERVER['REQUEST_METHOD'] = $method;
+        $this->assertEquals($expected, Request::isPost());
+    }
+
+    /**
+     * @return array
+     */
+    public function providerIsPost(): array
+    {
+        return [
+            [
+                Request::METHOD_GET,
+                false,
+            ],
+
+            [
+                Request::METHOD_POST,
+                true,
+            ],
+
+            [
+                Request::METHOD_DELETE,
+                false,
+            ],
+        ];
+    }
 }
