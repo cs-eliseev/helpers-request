@@ -142,12 +142,43 @@ class TestRequest extends TestCase
                 Request::METHOD_GET,
                 false,
             ],
-
             [
                 Request::METHOD_POST,
                 true,
             ],
+            [
+                Request::METHOD_DELETE,
+                false,
+            ],
+        ];
+    }
 
+    /**
+     * @param string $method
+     * @param bool $expected
+     *
+     * @dataProvider providerIsGet
+     */
+    public function testIsGet(string $method, bool $expected): void
+    {
+        $_SERVER['REQUEST_METHOD'] = $method;
+        $this->assertEquals($expected, Request::isGet());
+    }
+
+    /**
+     * @return array
+     */
+    public function providerIsGet(): array
+    {
+        return [
+            [
+                Request::METHOD_GET,
+                true,
+            ],
+            [
+                Request::METHOD_POST,
+                false,
+            ],
             [
                 Request::METHOD_DELETE,
                 false,
