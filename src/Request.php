@@ -63,12 +63,22 @@ class Request
     }
 
     /**
-     * Check Post request
+     * Check POST request
      *
      * @return bool
      */
     public static function isPost(): bool
     {
         return strtoupper($_SERVER['REQUEST_METHOD'] ?? '') === self::METHOD_POST;
+    }
+
+    /**
+     * Check GET request
+     *
+     * @return bool
+     */
+    public static function isGet(): bool
+    {
+        return strtoupper($_SERVER['REQUEST_METHOD'] ?? '') === self::METHOD_GET;
     }
 }
