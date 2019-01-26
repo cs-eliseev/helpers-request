@@ -61,4 +61,14 @@ class Request
     {
         return strtolower($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '') === 'xmlhttprequest';
     }
+
+    /**
+     * Check Post request
+     *
+     * @return bool
+     */
+    public static function isPost(): bool
+    {
+        return strtoupper($_SERVER['REQUEST_METHOD'] ?? '') === self::METHOD_POST;
+    }
 }
