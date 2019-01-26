@@ -100,7 +100,7 @@ Request::request('example');
 
 Set default value:
 ```php
-   Request::request('example_2', 12345);
+Request::request('example_2', 12345);
 // 12345
 ```
 
@@ -113,7 +113,14 @@ Request::isAjax();
 // true
 ```
 
+**Is POST**
 
+Example:
+```php
+$_SERVER['REQUEST_METHOD'] = Request::METHOD_POST;
+Request::isPost();
+// true
+```
 
 ## License
 
