@@ -131,6 +131,28 @@ Request::isGet();
 // true
 ```
 
+**Get request Uri**
+
+Example:
+```php
+$_SERVER['HTTP_REFERER'] = '/link/example';
+Request::getRequestUri();
+// /link/example
+```
+
+Set default value:
+```php
+Request::getRequestUri('/link/home');
+// /link/home
+```
+
+Ajax Uri:
+```php
+$_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+$_SERVER['REQUEST_URI'] = '/link/example_ajax';
+Request::getRequestUri();
+// /link/example_ajax
+```
 
 ## License
 
