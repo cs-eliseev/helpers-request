@@ -5,6 +5,18 @@ The helpers allows you to Request processing. Get value for POST/GET/REQUEST met
 
 Project repository: https://github.com/cs-eliseev/helpers-request
 
+```php
+switch(true) {
+    case Request::isAjax():
+    case Request::isPost():
+        Request::post('example', 5);
+        break;
+    case Request::isGet():
+        Request::getRequestUri();
+        break;
+}
+```
+
 ***
 
 ## Introduction
@@ -30,7 +42,7 @@ You can find the most recent version of this project [here](https://github.com/c
 ### Composer
 
 Execute the following command to get the latest version of the package:
-```
+```shell
 composer require cse/helpers-request
 ```
 
@@ -46,7 +58,7 @@ Or file composer.json should include the following contents:
 ### Git
 
 Clone this repository locally:
-```
+```shell
 git clone https://github.com/cs-eliseev/helpers-request.git
 ```
 
@@ -72,7 +84,6 @@ Set default value:
 Request::post('example_2', 12345);
 // 12345
 ```
-
 
 **Method GET data by key name**
 
