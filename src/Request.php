@@ -94,4 +94,24 @@ class Request
             ? $_SERVER['HTTP_REFERER'] ?? $default
             : $_SERVER['REQUEST_URI'] ?? $default;
     }
+
+    /**
+     * Check redirect to https
+     *
+     * @param string $url
+     * @return bool
+     */
+    public static function isRedirectedToHttps(string $url): bool
+    {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+        curl_exec($ch);
+        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $end_url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+
+        return in_array($http_code, [301, 302]) && preg_match('/^https:\/\/.*/i', $end_url) === 1;
+    }
 }
