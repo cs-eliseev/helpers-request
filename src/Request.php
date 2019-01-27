@@ -81,4 +81,17 @@ class Request
     {
         return strtoupper($_SERVER['REQUEST_METHOD'] ?? '') === self::METHOD_GET;
     }
+
+    /**
+     * Get request uri
+     *
+     * @param null $default
+     * @return null|string
+     */
+    public static function getRequestUri($default = null): ?string
+    {
+        return self::isAjax()
+            ? $_SERVER['HTTP_REFERER'] ?? $default
+            : $_SERVER['REQUEST_URI'] ?? $default;
+    }
 }
