@@ -57,3 +57,8 @@ $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
 $_SERVER['REQUEST_URI'] = '/link/example_ajax';
 var_dump(Request::getRequestUri());
 echo PHP_EOL;
+
+// Example: is redirect to https
+// true
+var_dump(Request::isRedirectedToHttps('http://google.com'));
+echo PHP_EOL;
