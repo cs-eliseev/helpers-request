@@ -154,6 +154,15 @@ Request::getRequestUri();
 // /link/example_ajax
 ```
 
+**Is redirect to https**
+
+Example:
+```php
+Request::isRedirectedToHttps('http://google.com');
+// true
+```
+
+
 ## License
 
 See the [LICENSE.md](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) file for licensing details.
