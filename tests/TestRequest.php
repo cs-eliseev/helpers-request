@@ -235,4 +235,28 @@ class TestRequest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param string $method
+     * @param bool $expected
+     *
+     * @dataProvider providerIsRedirectedToHttps
+     */
+    public function testIsRedirectedToHttps(string $url, bool $expected): void
+    {
+        $this->assertEquals($expected, Request::isRedirectedToHttps($url));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerIsRedirectedToHttps(): array
+    {
+        return [
+            [
+                'http://google.com',
+                true,
+            ]
+        ];
+    }
 }
