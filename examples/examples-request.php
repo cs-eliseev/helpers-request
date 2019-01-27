@@ -42,3 +42,18 @@ echo PHP_EOL;
 $_SERVER['REQUEST_METHOD'] = Request::METHOD_GET;
 var_dump(Request::isGet());
 echo PHP_EOL;
+
+// Example: get request uri
+// /link/example
+$_SERVER['HTTP_REFERER'] = '/link/example';
+var_dump(Request::getRequestUri());
+// set default value: /link/home
+unset($_SERVER['HTTP_REFERER']);
+var_dump(Request::getRequestUri('/link/home'));
+// ajax: /link/example_ajax
+unset($_SERVER['HTTP_X_REQUESTED_WITH']);
+unset($_SERVER['REQUEST_URI']);
+$_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+$_SERVER['REQUEST_URI'] = '/link/example_ajax';
+var_dump(Request::getRequestUri());
+echo PHP_EOL;
