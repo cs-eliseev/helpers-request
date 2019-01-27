@@ -184,4 +184,55 @@ class TestRequest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @param null|string $data
+     * @param bool $is_ajax
+     * @param null|string $default
+     * @param string $expected
+     *
+     * @dataProvider providerGetRequestUri
+     */
+    public function testGetRequestUri(?string $data, bool $is_ajax, ?string $default, string $expected)
+    {
+        if ($is_ajax) {
+            unset($_SERVER['HTTP_REFERER']);
+
+            $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+            $_SERVER['REQUEST_URI'] = $data;
+        } else {
+            unset($_SERVER['HTTP_X_REQUESTED_WITH']);
+            unset($_SERVER['REQUEST_URI']);
+
+            $_SERVER['HTTP_REFERER'] = $data;
+        }
+        $this->assertEquals($expected, Request::getRequestUri($default));
+    }
+
+    /**
+     * @return array
+     */
+    public function providerGetRequestUri(): array
+    {
+        return [
+            [
+                '/link/test',
+                true,
+                null,
+                '/link/test',
+            ],
+            [
+                '/link/test',
+                false,
+                null,
+                '/link/test',
+            ],
+            [
+                null,
+                false,
+                '/link/home',
+                '/link/home',
+            ],
+        ];
+    }
 }
