@@ -87,12 +87,12 @@ class TestRequest extends TestCase
     }
 
     /**
-     * @param             $is_ajax
-     * @param             $expected
+     * @param bool $is_ajax
+     * @param bool $expected
      *
      * @dataProvider providerIsAjax
      */
-    public function testIsAjax($is_ajax, $expected)
+    public function testIsAjax(bool $is_ajax, bool $expected)
     {
         if ($is_ajax) {
             $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
@@ -112,7 +112,6 @@ class TestRequest extends TestCase
                 true,
                 true,
             ],
-
             [
                 false,
                 false,
