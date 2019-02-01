@@ -13,6 +13,8 @@ class TestRequest extends TestCase
      * @param $expected
      *
      * @dataProvider providerRequest
+     *
+     * @runInSeparateProcess
      */
     public function testPost(string $key, ?string $default, ?string $value, bool $set, $expected): void
     {
@@ -33,6 +35,8 @@ class TestRequest extends TestCase
      * @param $expected
      *
      * @dataProvider providerRequest
+     *
+     * @runInSeparateProcess
      */
     public function testGet(string $key, ?string $default, ?string $value, bool $set, $expected): void
     {
@@ -52,6 +56,8 @@ class TestRequest extends TestCase
      * @param $expected
      *
      * @dataProvider providerRequest
+     *
+     * @runInSeparateProcess
      */
     public function testRequests(string $key, $default, $value, bool $set, $expected): void
     {
@@ -91,6 +97,8 @@ class TestRequest extends TestCase
      * @param bool $expected
      *
      * @dataProvider providerIsAjax
+     *
+     * @runInSeparateProcess
      */
     public function testIsAjax(bool $is_ajax, bool $expected)
     {
@@ -124,6 +132,8 @@ class TestRequest extends TestCase
      * @param bool $expected
      *
      * @dataProvider providerIsPost
+     *
+     * @runInSeparateProcess
      */
     public function testIsPost(string $method, bool $expected)
     {
@@ -157,6 +167,8 @@ class TestRequest extends TestCase
      * @param bool $expected
      *
      * @dataProvider providerIsGet
+     *
+     * @runInSeparateProcess
      */
     public function testIsGet(string $method, bool $expected): void
     {
@@ -192,20 +204,23 @@ class TestRequest extends TestCase
      * @param string $expected
      *
      * @dataProvider providerGetRequestUri
+     *
+     * @runInSeparateProcess
      */
     public function testGetRequestUri(?string $data, bool $is_ajax, ?string $default, string $expected)
     {
         if ($is_ajax) {
-            unset($_SERVER['HTTP_REFERER']);
-
-            $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
-            $_SERVER['REQUEST_URI'] = $data;
-        } else {
-            unset($_SERVER['HTTP_X_REQUESTED_WITH']);
             unset($_SERVER['REQUEST_URI']);
 
+            $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
             $_SERVER['HTTP_REFERER'] = $data;
+        } else {
+            unset($_SERVER['HTTP_X_REQUESTED_WITH']);
+            unset($_SERVER['HTTP_REFERER']);
+
+            $_SERVER['REQUEST_URI'] = $data;
         }
+
         $this->assertEquals($expected, Request::getRequestUri($default));
     }
 
@@ -237,10 +252,12 @@ class TestRequest extends TestCase
     }
 
     /**
-     * @param string $method
+     * @param string $url
      * @param bool $expected
      *
      * @dataProvider providerIsRedirectedToHttps
+     *
+     * @runInSeparateProcess
      */
     public function testIsRedirectedToHttps(string $url, bool $expected): void
     {
@@ -254,7 +271,7 @@ class TestRequest extends TestCase
     {
         return [
             [
-                'http://google.com',
+                'http://packagist.org',
                 true,
             ]
         ];
