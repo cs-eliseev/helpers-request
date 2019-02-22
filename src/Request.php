@@ -21,7 +21,8 @@ class Request
      *
      * @param string $key
      * @param null $default
-     * @return null
+     *
+     * @return null|mixed
      */
     public static function post(string $key, $default = null)
     {
@@ -33,7 +34,8 @@ class Request
      *
      * @param string $key
      * @param null $default
-     * @return null
+     *
+     * @return null|mixed
      */
     public static function get(string $key, $default = null)
     {
@@ -45,6 +47,7 @@ class Request
      *
      * @param $key
      * @param null $default
+     *
      * @return mixed|null
      */
     public static function request($key, $default = null)
@@ -86,6 +89,7 @@ class Request
      * Get request uri
      *
      * @param null $default
+     *
      * @return null|string
      */
     public static function getRequestUri($default = null): ?string
@@ -99,6 +103,7 @@ class Request
      * Check redirect to https
      *
      * @param string $url
+     *
      * @return bool
      */
     public static function isRedirectedToHttps(string $url): bool
