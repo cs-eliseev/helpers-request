@@ -54,7 +54,7 @@ composer require cse/helpers-request
 ```
 
 Or file composer.json should include the following contents:
-```
+```json
 {
     "require": {
         "cse/helpers-request": "*"
@@ -178,6 +178,28 @@ Example:
 ```php
 Request::isRedirectedToHttps('http://google.com');
 // true
+```
+
+
+## Testing & Code Coverage
+
+PHPUnit is used for unit testing. Unit tests ensure that class and methods does exactly what it is meant to do.
+
+General PHPUnit documentation can be found at https://phpunit.de/documentation.html.
+
+To run the PHPUnit unit tests, execute:
+```shell
+phpunit PATH/TO/PROJECT/tests/
+```
+
+If you want code coverage reports, use the following:
+```shell
+phpunit --coverage-html ./report PATH/TO/PROJECT/tests/
+```
+
+Used PHPUnit default config:
+```shell
+phpunit --configuration PATH/TO/PROJECT/phpunit.xml
 ```
 
 
