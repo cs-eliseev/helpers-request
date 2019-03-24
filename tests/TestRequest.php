@@ -7,7 +7,7 @@ class TestRequest extends TestCase
 {
     /**
      * @param string $key
-     * @param null|string $default
+     * @param $default
      * @param string $value
      * @param bool $set
      * @param $expected
@@ -16,7 +16,7 @@ class TestRequest extends TestCase
      *
      * @runInSeparateProcess
      */
-    public function testPost(string $key, ?string $default, ?string $value, bool $set, $expected): void
+    public function testPost(string $key, $default, ?string $value, bool $set, $expected): void
     {
         if ($set) {
             $_POST[$key] = $value;
@@ -29,7 +29,7 @@ class TestRequest extends TestCase
 
     /**
      * @param string $key
-     * @param null|string $default
+     * @param $default
      * @param null|string $value
      * @param bool $set
      * @param $expected
@@ -38,7 +38,7 @@ class TestRequest extends TestCase
      *
      * @runInSeparateProcess
      */
-    public function testGet(string $key, ?string $default, ?string $value, bool $set, $expected): void
+    public function testGet(string $key, $default, ?string $value, bool $set, $expected): void
     {
         if ($set) {
             $_GET[$key] = $value;
@@ -84,10 +84,10 @@ class TestRequest extends TestCase
             ],
             [
                 'test2',
-                '12345',
+                12345,
                 null,
                 true,
-                '12345',
+                12345,
             ],
         ];
     }
@@ -200,14 +200,14 @@ class TestRequest extends TestCase
     /**
      * @param null|string $data
      * @param bool $is_ajax
-     * @param null|string $default
+     * @param $default
      * @param string $expected
      *
      * @dataProvider providerGetRequestUri
      *
      * @runInSeparateProcess
      */
-    public function testGetRequestUri(?string $data, bool $is_ajax, ?string $default, string $expected)
+    public function testGetRequestUri(?string $data, bool $is_ajax, $default, string $expected)
     {
         if ($is_ajax) {
             unset($_SERVER['REQUEST_URI']);

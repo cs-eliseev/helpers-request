@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace cse\helpers;
 
@@ -20,7 +20,7 @@ class Request
      * Get POST data by key name
      *
      * @param string $key
-     * @param null $default
+     * @param $default
      *
      * @return null|mixed
      */
@@ -33,7 +33,7 @@ class Request
      * Get GET data by key name
      *
      * @param string $key
-     * @param null $default
+     * @param $default
      *
      * @return null|mixed
      */
@@ -45,12 +45,12 @@ class Request
     /**
      * Get Request date by key name
      *
-     * @param $key
-     * @param null $default
+     * @param string $key
+     * @param $default
      *
      * @return mixed|null
      */
-    public static function request($key, $default = null)
+    public static function request(string $key, $default = null)
     {
         return $_REQUEST[$key] ?? $default;
     }
@@ -88,7 +88,7 @@ class Request
     /**
      * Get request uri
      *
-     * @param null $default
+     * @param $default
      *
      * @return null|string
      */
