@@ -1,6 +1,11 @@
 REQUEST CSE HELPERS
 =======
 
+[![Packagist](https://img.shields.io/packagist/v/cse/helpers-request.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-request)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1-8892BF.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-request)
+[![Packagist](https://img.shields.io/packagist/l/cse/helpers-request.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md)
+[![GitHub repo size](https://img.shields.io/github/repo-size/cs-eliseev/helpers-request.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-request/archive/master.zip)
+
 The helpers allows you to Request processing. Get value for POST/GET/REQUEST method by key and set default value, check exist AJAX, POST and GET method - all this is available in this library.
 
 Project repository: https://github.com/cs-eliseev/helpers-request
