@@ -41,7 +41,6 @@ tools:
   # PHP CS Fixer (http://http://cs.sensiolabs.org/).
   php_cs_fixer:
     enabled: true
-    command: 'php-cs-fixer'
     config:
       level: 'psr2'
 
