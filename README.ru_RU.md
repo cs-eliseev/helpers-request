@@ -3,14 +3,14 @@
 REQUEST CSE HELPERS
 =======
 
-[![Travis (.org)](https://img.shields.io/travis/cs-eliseev/helpers-word.svg?style=flat-square)](https://travis-ci.org/cs-eliseev/helpers-word)
-[![Codecov](https://img.shields.io/codecov/c/github/cs-eliseev/helpers-word.svg?style=flat-square)](https://codecov.io/gh/cs-eliseev/helpers-word)
-[![Scrutinizer code quality](https://img.shields.io/scrutinizer/g/cs-eliseev/helpers-word.svg?style=flat-square)](https://scrutinizer-ci.com/g/cs-eliseev/helpers-word/?branch=master)
+[![Travis (.org)](https://img.shields.io/travis/cs-eliseev/helpers-request.svg?style=flat-square)](https://travis-ci.org/cs-eliseev/helpers-request)
+[![Codecov](https://img.shields.io/codecov/c/github/cs-eliseev/helpers-request.svg?style=flat-square)](https://codecov.io/gh/cs-eliseev/helpers-request)
+[![Scrutinizer code quality](https://img.shields.io/scrutinizer/g/cs-eliseev/helpers-request.svg?style=flat-square)](https://scrutinizer-ci.com/g/cs-eliseev/helpers-request/?branch=master)
 
-[![Packagist](https://img.shields.io/packagist/v/cse/helpers-word.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-word)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1-8892BF.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-word)
-[![Packagist](https://img.shields.io/packagist/l/cse/helpers-word.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-word/blob/master/LICENSE.md)
-[![GitHub repo size](https://img.shields.io/github/repo-size/cs-eliseev/helpers-word.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-word/archive/master.zip)
+[![Packagist](https://img.shields.io/packagist/v/cse/helpers-request.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-request)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1-8892BF.svg?style=flat-square)](https://packagist.org/packages/cse/helpers-request)
+[![Packagist](https://img.shields.io/packagist/l/cse/helpers-request.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md)
+[![GitHub repo size](https://img.shields.io/github/repo-size/cs-eliseev/helpers-request.svg?style=flat-square)](https://github.com/cs-eliseev/helpers-request/archive/master.zip)
 
 Данная библиотек позволяет удобно работать с запросами. Доступны методы POST/GET/REQUEST для получения данных и установки значений по умолчанию, также можно проверить существование методов AJAX, POST и GET, а так же другие функци.
 

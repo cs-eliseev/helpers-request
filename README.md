@@ -1,3 +1,5 @@
+English | [Русский](https://github.com/cs-eliseev/helpers-request/blob/master/README.ru_RU.md)
+
 REQUEST CSE HELPERS
 =======
 
@@ -14,6 +16,7 @@ The helpers allows you to Request processing. Get value for POST/GET/REQUEST met
 
 Project repository: https://github.com/cs-eliseev/helpers-request
 
+**DEMO**
 ```php
 switch(true) {
     case Request::isAjax():
@@ -86,7 +89,7 @@ git clone https://github.com/cs-eliseev/helpers-request.git
 
 The class consists of static methods that are conveniently used in any project. See example [examples-request.php](https://github.com/cs-eliseev/helpers-request/blob/master/examples/examples-request.php).
 
-**Method POST data by key name**
+**POST data by key name**
 
 Example:
 ```php
@@ -101,7 +104,7 @@ Request::post('example_2', 12345);
 // 12345
 ```
 
-**Method GET data by key name**
+**GET data by key name**
 
 Example:
 ```php
@@ -116,7 +119,7 @@ Request::get('example_2', 12345);
 // 12345
 ```
 
-**Method REQUEST data by key name**
+**REQUEST data by key name**
 
 Example:
 ```php
@@ -181,7 +184,7 @@ Request::getRequestUri();
 // /link/example_ajax
 ```
 
-**Is redirect to https**
+**Is redirect to HTTPS**
 
 Example:
 ```php
@@ -214,7 +217,7 @@ phpunit --configuration PATH/TO/PROJECT/phpunit.xml
 
 ## License
 
-The CSE HELPERS is open-sourced software licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) for more information.
+The CSE HELPERS REQUEST is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) for more information.
 
 ***
 
