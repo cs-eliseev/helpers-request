@@ -1,7 +1,7 @@
 {
     "name": "cse/helpers-request",
     "description": "The helpers allows you to Request processing. Get value for POST/GET/REQUEST method by key and set default value, check exist AJAX, POST and GET method - all this is available in this library.",
-    "keywords": ["set default post", "set default get", "set default request", "check ajax", "check post", "check get", "cse", "cs-eliseev", "framework", "basic", "library", "project"],
+    "keywords": ["request", "requests", "post", "get", "ajax", "cse", "collection", "collections", "tool", "tools", "utilities", "utils", "utility", "helper", "helpers", "library", "framework"],
     "homepage": "https://github.com/cs-eliseev/helpers-request",
     "type": "library",
     "license": "MIT",
