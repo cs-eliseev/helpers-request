@@ -33,11 +33,11 @@ switch(true) {
 
 ## Introduction
 
-CSE HELPERS is a collection of several libraries with simple functions written in PHP for people.
+[CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.md) is a collection of several libraries with simple functions written in PHP for people.
 
 Despite using PHP as the main programming language for the Internet, its functions are not enough. REQUEST CSE HELPERS solves the problem set default value to POST, GET and REQUEST method, and check exist AJAX, POST and GET method.
 
-CSE HELPERS was created for the rapid development of web applications.
+[CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.md) was created for the rapid development of web applications.
 
 **CSE Helpers project:**
 * [Array CSE helpers](https://github.com/cs-eliseev/helpers-arrays)
@@ -224,7 +224,7 @@ Even voicing your suggestions for features is great. Anything to help is much ap
 
 ## License
 
-The CSE HELPERS REQUEST is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) for more information.
+The REQUEST CSE HELPERS is open-source PHP library licensed under the MIT license. Please see [License File](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md) for more information.
 
 ***
 

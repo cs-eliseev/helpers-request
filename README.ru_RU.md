@@ -34,11 +34,11 @@ switch(true) {
 
 ## Описание проекта
 
-CSE HELPERS - это набор из небольших библиотек с простыми функциями написанных на PHP специально для вас.
+[CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.ru_RU.md) - это набор из небольших библиотек с простыми функциями написанных на PHP специально для вас.
 
 Несмотря на повсеместное использование PHP в качестве основного языка для WEB разработки, его зачастую недостаточно. REQUEST CSE HELPERS, позволит вам довольно просто проверять и обрабатывать запросы.
 
-CSE HELPERS создан для быстрой разработки веб-приложений.
+[CSE HELPERS](https://github.com/cs-eliseev/helpers/blob/master/README.ru_RU.md) создан для быстрой разработки веб-приложений.
 
 **Список библиотек CSE Helpers:**
 * [Array CSE helpers](https://github.com/cs-eliseev/helpers-arrays)
@@ -85,7 +85,7 @@ git clone https://github.com/cs-eliseev/helpers-request.git
 
 ### Скачать
 
-[Скачать последнюю версию проекта можно здесь](https://github.com/cs-eliseev/helpers-word/archive/master.zip).
+[Скачать последнюю версию проекта можно здесь](https://github.com/cs-eliseev/helpers-request/archive/master.zip).
 
 ## Использование
 
@@ -227,7 +227,7 @@ phpunit --configuration PATH/TO/PROJECT/phpunit.xml
 
 ## Лицензия
 
-CSE HELPERS REQUEST это PHP-библиотека с открытым исходным кодом распространяемая по лицензии MIT. Для получения более подробной информации, пожалуйста, ознакомьтесь с [лицензионным файлом](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md).
+REQUEST CSE HELPERS это PHP-библиотека с открытым исходным кодом распространяемая по лицензии MIT. Для получения более подробной информации, пожалуйста, ознакомьтесь с [лицензионным файлом](https://github.com/cs-eliseev/helpers-request/blob/master/LICENSE.md).
 
 ***
 
